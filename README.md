@@ -1,0 +1,53 @@
+# TOC
+- A
+  - [Arrays](Arrays)
+- B
+  - 
+- C
+  - [Closures](Closures)
+  - [Constants](Constants)
+- D
+  - 
+- E
+  - 
+- F
+  - [For](For)
+  - [Functions](Functions)
+- G
+  - [Generics](Generics)
+- H
+  - [Hello-World](Hello-World)
+- I
+  - [If-Else](If-Else)
+  - [Interfaces](Interfaces)
+- J
+- K
+- L
+- M
+  - [Maps](Maps)
+  - [Methods](Methods)
+  - [Multiple-Return-Values](Multiple-Return-Values)
+- N
+- O
+- P
+  - [Pointers](Pointers)
+- Q
+- R
+  - [Range](Range)
+  - [Recursion](Recursion)
+- S
+  - [Slices](Slices)
+  - [Strings&Runes](Strings%26Runes)
+  - [Struct-Embedding](Struct-Embedding)
+  - [Structs](Structs)
+  - [Switch](Switch)
+- T
+- U
+- V
+  - [Values](Values)
+  - [Variables](Variables)
+  - [Variadic-Functions](Variadic-Functions)
+- W
+- X
+- Y
+- Z
