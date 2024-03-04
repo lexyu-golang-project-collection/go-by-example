@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"slices"
+)
 
 func main() {
 	s := make([]string, 3)
@@ -36,6 +39,11 @@ func main() {
 	t := []string{"g", "h", "i"}
 	fmt.Println("dcl", t)
 
+	t2 := []string{"g", "h", "i"}
+	if slices.Equal(t, t2) {
+		fmt.Println("t == t2")
+	}
+
 	twoD := make([][]int, 3)
 	for i := 0; i < 3; i++ {
 		innerLen := i + 1
@@ -45,4 +53,11 @@ func main() {
 		}
 	}
 	fmt.Println("2d:", twoD)
+
+	a := []int{1, 2, 3, 4}
+	b := append([]int{}, a...)
+	b = append(b[:3], b[3+1:]...)
+	fmt.Println(a)
+	fmt.Println(b)
+
 }

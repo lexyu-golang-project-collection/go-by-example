@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"maps"
+)
 
 func main() {
 	// make(map[key-type]val-type).
@@ -18,9 +21,17 @@ func main() {
 	delete(m, "k2")
 	fmt.Println("map:", m)
 
+	clear(m)
+	fmt.Println("map:", m)
+
 	_, prs := m["k2"]
 	fmt.Println("prs:", prs)
 
 	n := map[string]int{"foo": 1, "bar": 2}
 	fmt.Println("map:", n)
+
+	n2 := map[string]int{"foo": 1, "bar": 2}
+	if maps.Equal(n, n2) {
+		fmt.Println("n == n2")
+	}
 }

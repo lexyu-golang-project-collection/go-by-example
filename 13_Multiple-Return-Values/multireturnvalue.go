@@ -8,8 +8,7 @@ func vals() (int, int) {
 
 func main() {
 	a, b := vals()
-	fmt.Println(a)
-	fmt.Println(b)
+	fmt.Println(a, b)
 
 	_, c := vals()
 	fmt.Println(c)

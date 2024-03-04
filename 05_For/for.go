@@ -18,7 +18,7 @@ func main() {
 		break
 	}
 
-	for n := 0; n <= 5; n++ {
+	for n := range 6 {
 		if n%2 == 0 {
 			continue
 		}

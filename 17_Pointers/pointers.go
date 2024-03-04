@@ -18,15 +18,15 @@ func main() {
 	i := 1
 	value := &i
 	a := *value
-	fmt.Printf("initial: i=%d, a=%d\n", i, a)
-	fmt.Printf("initial: i=%p, a=%p\n", &i, &a)
+	fmt.Printf("initial: i=%d, a=%d, value=%d\n", i, a, value)
+	fmt.Printf("initial: i=%p, a=%p, value=%p\n", &i, &a, &value)
 
 	zeroval(a)
-	fmt.Println("zeroval:", a)
+	fmt.Println("after zeroval a=", a)
+	fmt.Printf("after zeroval: i=%p, a=%p\n", &i, &a)
 
 	zeroptr(&a)
-	*value = 11111
-	fmt.Printf("zeroptr: i=%d, a=%d\n", i, a)
+	fmt.Printf("after zeroptr: i=%d, a=%d\n", i, a)
+	fmt.Printf("after zeroptr: i=%p, a=%p\n", &i, &a)
 
-	fmt.Println("pointer:", &a)
 }
