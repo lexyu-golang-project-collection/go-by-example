@@ -44,18 +44,18 @@ func main() {
 	// animals := []Animal{Dog{}, Cat{}, Llama{}, JavaProgrammer{}}
 
 	// fix, new(Cat) / &Cat{}
-	/*
-		animals := []Animal{Dog{}, new(Cat), Llama{}, JavaProgrammer{}}
-		for _, aanimal := range animals {
-			fmt.Println(aanimal.Speak())
-		}
-	*/
-
-	// everything in Go is passed by value
-
-	animals := []Animal{new(Dog), new(Cat), Llama{}, JavaProgrammer{}}
+	// /*
+	animals := []Animal{Dog{}, new(Cat), Llama{}, JavaProgrammer{}}
 	for _, aanimal := range animals {
 		fmt.Println(aanimal.Speak())
 	}
+	// */
+
+	// everything in Go is passed by value
+
+	// animals := []Animal{new(Dog), new(Cat), Llama{}, JavaProgrammer{}}
+	// for _, aanimal := range animals {
+	// 	fmt.Println(aanimal.Speak())
+	// }
 
 }

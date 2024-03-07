@@ -40,7 +40,7 @@ func (j JavaProgrammer) Speak() string {
 
 func main() {
 	animals := []Animal{Dog{}, Cat{}, Llama{}, JavaProgrammer{}}
-	for _, aanimal := range animals {
-		fmt.Println(aanimal.Speak())
+	for _, animal := range animals {
+		fmt.Println(animal.Speak())
 	}
 }

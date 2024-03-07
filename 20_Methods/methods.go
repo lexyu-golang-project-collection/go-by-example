@@ -26,7 +26,7 @@ type user struct {
 // value recevier, 不修改值
 // method
 func (u user) notify() {
-	fmt.Println("This notify is method !")
+	// fmt.Println("This notify is method!")
 	fmt.Println("user = ", u)
 }
 
@@ -64,9 +64,10 @@ func main() {
 	fmt.Println()
 
 	tim.changeName("test")
+	fmt.Println("After Call changeName() value receiver to change user name = test")
 	tim.notify() // (&tim).notify()
-	fmt.Println()
 
 	tim.changeEmail("test@abc.com")
+	fmt.Println("After Call changeEmail() pointer receiver to change user email = test@abc.com")
 	tim.notify()
 }

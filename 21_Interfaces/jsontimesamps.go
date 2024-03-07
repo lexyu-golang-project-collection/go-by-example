@@ -26,24 +26,25 @@ func (t *Timestamp) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
+// The real world: getting a proper timestamp out of the Twitter API
 func main() {
 	// our target will be of type map[string]interface{}, which is a
 	// pretty generic type that will give us a hashtable whose keys
 	// are strings, and whose values are of type interface{}
-	// var val1 map[string]interface{}
+	var val1 map[string]interface{}
 
 	// var val2 map[string]time.Time
 
-	var val3 map[string]Timestamp
+	// var val3 map[string]Timestamp
 
-	if err := json.Unmarshal([]byte(input), &val3); err != nil {
+	if err := json.Unmarshal([]byte(input), &val1); err != nil {
 		panic(err)
 	}
 
-	fmt.Println(val3)
-	for k, v := range val3 {
+	fmt.Println("val = ", val1)
+	for k, v := range val1 {
 		fmt.Println(k, reflect.TypeOf(v))
 	}
 
-	fmt.Println(time.Time(val3["create_at"]))
+	// fmt.Println(time.Time(val3["create_at"]))
 }
