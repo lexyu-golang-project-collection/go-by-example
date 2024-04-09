@@ -35,8 +35,8 @@ func main() {
 		wg.Add(1)
 
 		go func() {
-			defer wg.Done()
 			worker(i)
+			defer wg.Done()
 		}()
 	}
 
