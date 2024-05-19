@@ -19,4 +19,5 @@ func main() {
 		<-limiter
 		fmt.Println("request", req, time.Now())
 	}
+
 }
