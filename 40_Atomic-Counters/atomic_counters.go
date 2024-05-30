@@ -9,6 +9,8 @@ import (
 func main() {
 
 	var ops atomic.Uint64
+	var counter int64
+
 	var wg sync.WaitGroup
 
 	for i := 0; i < 50; i++ {
@@ -17,6 +19,7 @@ func main() {
 		go func() {
 			for i := 0; i < 1000; i++ {
 				ops.Add(1)
+				counter++
 			}
 			wg.Done()
 		}()
@@ -24,4 +27,5 @@ func main() {
 
 	wg.Wait()
 	fmt.Println("ops:", ops.Load())
+	fmt.Println("counter:", counter)
 }
