@@ -66,7 +66,7 @@ func main() {
 			for {
 				write := writeOp{
 					key:  rand.Intn(5),
-					val:  rand.Intn(10),
+					val:  rand.Intn(100),
 					resp: make(chan bool),
 				}
 				writes <- write
@@ -78,7 +78,7 @@ func main() {
 		}()
 	}
 
-	time.Sleep(2 * time.Second)
+	time.Sleep(1 * time.Second)
 
 	readOpsResult := atomic.LoadUint64(&readOps)
 	writeOpsResult := atomic.LoadUint64(&writeOps)
