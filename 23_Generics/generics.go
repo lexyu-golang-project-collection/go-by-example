@@ -12,6 +12,7 @@ func main() {
 	lst.Push(13)
 	lst.Push(25)
 	fmt.Println("list:", lst.GetAll())
+
 }
 
 func MapKeys[K comparable, V any](m map[K]V) []K {
