@@ -6,9 +6,9 @@ import (
 )
 
 type areaError struct {
-	err    string  //error description
-	length float64 //length which caused the error
-	width  float64 //width which caused the error
+	err    string
+	length float64
+	width  float64
 }
 
 func (e *areaError) Error() string {
@@ -53,11 +53,9 @@ func main() {
 		if errors.As(err, &areaError) {
 			if areaError.lengthNegative() {
 				fmt.Printf("error: length %0.2f is less than zero\n", areaError.length)
-
 			}
 			if areaError.widthNegative() {
 				fmt.Printf("error: width %0.2f is less than zero\n", areaError.width)
-
 			}
 			return
 		}

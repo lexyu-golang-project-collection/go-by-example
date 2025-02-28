@@ -7,7 +7,7 @@ import (
 
 func circleArea(radius float64) (float64, error) {
 	if radius < 0 {
-		return 0, fmt.Errorf("Area calculation failed, radius %0.2f is less than zero", radius)
+		return 0, fmt.Errorf("area calculation failed, radius %0.2f is less than zero", radius)
 	}
 	return math.Pi * radius * radius, nil
 }

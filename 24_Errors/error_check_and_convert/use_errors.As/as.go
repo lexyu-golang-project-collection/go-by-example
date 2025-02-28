@@ -17,6 +17,8 @@ func main() {
 	var err = &MyError{"MyError error demo"}
 	err1 := fmt.Errorf("wrap err: %w", err)
 	err2 := fmt.Errorf("wrap err1: %w", err1)
+
+	// 使用 errors.As 轉換為特定類型
 	var e *MyError
 	if errors.As(err2, &e) {
 		println("MyError is on the chain of err2")
